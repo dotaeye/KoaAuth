@@ -48,7 +48,7 @@ module.exports = function(sequelize, DataTypes) {
     {
       classMethods: {
         associate: function(models) {
-          User.hasMany(models.UserTrace, { as: 'trace', foreignKey: 'userId' });
+          User.hasMany(models.UserTrace);
         }
       }
     }

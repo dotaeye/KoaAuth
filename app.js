@@ -5,6 +5,7 @@ const body = require('koa-body'); // body parser
 const compose = require('koa-compose'); // middleware composer
 const compress = require('koa-compress'); // HTTP compression
 const config = require('./config');
+const models =require ('./models');
 
 const app = new Koa();
 
@@ -73,4 +74,8 @@ app.use(async function composeSubapp(ctx) {
 
 /* create server - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
-app.listen(process.env.PORT || 3000);
+models.sequelize.sync().then(function () {
+  app.listen(process.env.PORT || 3000);
+});
+
+module.exports = app;
