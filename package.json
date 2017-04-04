@@ -16,7 +16,6 @@
     "koa-session2": "^2.2.3",
     "koa-static2": "^0.1.8",
     "mysql": "^2.13.0",
-    "mysql2": "^1.2.0",
     "promise-mysql": "^3.0.0",
     "sequelize": "^3.30.4",
     "xmlify": "^1.1.0"

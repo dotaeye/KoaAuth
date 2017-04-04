@@ -130,6 +130,10 @@ app.use(koaLogger(logger, {}));
 //   await next();
 // });
 
+app.use(ctx => {
+  ctx.body = 'Hello World';
+});
+
 app.use(require('./routes/user'));
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */

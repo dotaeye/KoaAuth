@@ -9,7 +9,7 @@
     "extends": "eslint:recommended",
     "rules": {
       "array-bracket-spacing": [ "error", "always", { "singleValue": false } ],
-      "comma-dangle": [ "error", "always-multiline" ],
+      "comma-dangle": [ 0 ],
       "curly": [ "error", "multi-line" ],
       "indent": [ "error", 2, { "SwitchCase": 1 } ],
       "no-case-declarations": "off",

@@ -13,7 +13,6 @@ let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
-  console.log(config);
   sequelize = new Sequelize(
     config.database,
     config.username,
@@ -27,6 +26,7 @@ fs
   .filter(function(file) {
     return file.indexOf('.') !== 0 &&
       file !== basename &&
+      file !== 'index.js' &&
       file.slice(-3) === '.js';
   })
   .forEach(function(file) {
